@@ -1,0 +1,324 @@
+body {
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+//Header
+
+#header {
+   position: relative;
+
+   .header_slider {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      .carousel-inner, .carousel-item, .carousel-item img {
+         height: 100%;
+      }
+      .carousel-item img {
+         object-fit: cover;
+      }
+   }
+
+   .logo_txt {
+      font-size: 3.5em;
+   }
+
+   .choose_language {
+      background: transparent;
+      border: 2px solid #fff;
+      max-width: 50px;
+      padding: 0;
+      outline: 0;
+      cursor: pointer;
+   
+   
+      option {
+         color: #000;
+         cursor: pointer;
+      }
+   }
+
+   .main_navbar {
+
+      #header_navigation {
+         box-shadow: 0 2px 4px #75644b;
+         background: #fafafa;
+      }
+
+      .navbar-nav {
+
+         .navbar-link {
+            color: #6d6e71; 
+         }
+
+         .dropdown-menu {
+            background: #fafafa;
+         }
+
+         .dropdown-menu[data-bs-popper] {
+            margin-top: -1px;
+         }
+         .dropdown-toggle {
+            height: 100%;
+            width: 20px;
+
+            &::after {
+               border-top: .3em solid transparent;
+               border-right: .3em solid transparent;
+               border-bottom: .3em solid transparent;
+               border-left: .3em solid;
+               vertical-align: baseline;
+               color: #6d6e71;
+               transition: all .2s ease;
+               position: absolute;
+               top: 40%;
+            }
+
+            &.show {
+
+               &::after {
+                  transform: rotate(90deg);
+               }
+
+            }
+         }
+      }
+   }
+
+   .cart_button {
+      display: inline-grid;
+      background: rgb(82,168,40);
+      background: -moz-linear-gradient(180deg, rgba(82,168,40,1) 0%, rgba(117,92,30,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(82,168,40,1) 0%, rgba(117,92,30,1) 100%);
+      background: linear-gradient(180deg, rgba(82,168,40,1) 0%, rgba(117,92,30,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#52a828",endColorstr="#755c1e",GradientType=1);
+      grid-auto-flow: column;
+      justify-content: center;
+      grid-gap: 10px;
+      align-content: center;
+      border: 1px solid #fafafa;
+   }
+
+   .main_header {
+      padding-top: 5rem;
+      margin-bottom: 0;
+      font-size: 4rem;
+      line-height: 100%;
+
+      span {
+         display: block;
+      }
+
+      .part1 {
+         margin-left: 15%;
+      }
+
+      .part2 {
+         margin-left: 30%;
+      }
+
+      .part3 {
+         margin-left: 45%;
+      }
+   }
+}
+
+//Header
+
+//Advantages
+
+#our_advantages {
+   margin-top: -2px;
+   position: relative;
+
+   .advantages_item1 {
+
+      .advantages_item1_img {
+         margin-top: -65px;
+         margin-bottom: 2.5rem!important;
+         width: 100%;
+         max-width: 250px;
+      }
+
+      .nagro_more {
+         font-size: 4rem;
+      }
+   }
+
+   .advantages_details_btn {
+      transition: all .4s ease;
+   }
+
+   .advantages_list {
+
+      .advantages_list_item {
+         display: inline-flex;
+         grid-auto-flow: column;
+         grid-gap: 20px;
+         align-items: flex-start;
+
+         .header {
+            color: #4d4545;
+         }
+
+         .subtitle {
+            color: #a7a9ac;
+         }
+
+         .advant_value {
+            color: #c49a6c;
+         }
+      }
+   }
+
+   .advantages_item2 {
+      min-height: 600px;
+      img {
+         object-fit: cover;
+      }
+   }
+}
+
+//Advantages
+
+//Calculator
+
+#fertilizer_calculator {
+   background: #e9e5e4;
+   position: absolute;
+   top: -35%;
+
+   .fertilizer_calculator_content {
+      background: #f1eff0;
+      border-radius: 5px;
+      border-color: #a7a9ac!important;
+      border-style: dashed!important;
+   }
+
+   .fertilizer_calculator_middle {
+      position: relative;
+
+      &::after, &::before {
+         content: "";
+    width: 60%;
+    height: 1px;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    background: #d1d3d4;
+      }
+      &::after {
+         top: 0;
+      }
+      &::before {
+         bottom: 0;
+      }
+      span {
+         color: #25383f;
+      }
+   }
+
+   #choose_culture {
+      color: #a7a9ac;
+      background: #fefefe;
+      border: 2px solid #d1d3d4;
+   }
+
+   input {
+      padding-left: .75rem;
+      background: #fefefe;
+      border: 2px solid #d1d3d4;
+
+      &::placeholder {
+         color: #a7a9ac;
+      }
+
+   }
+
+   .profit_title, .profit_value {
+      color: #d26441;
+   }
+   .profit_value {
+      font-size: 4rem;
+      line-height: 100%;
+   }
+   .error_text {
+      color: red;
+      opacity: 0;
+      min-height: 25px;
+   }
+   .error_border {
+      
+      &:valid {
+         border-color: #d1d3d4;
+      }
+
+      &:invalid {
+      border-color: red;
+      }
+   }
+}
+
+//Calculator
+
+//Media queries
+
+@media screen and (max-width: 992px) {
+   .advantages_item1 {
+      margin-bottom: 50px;
+   }
+   #fertilizer_calculator {
+      top: auto;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0);
+   }
+   #header .main_header .part1, #header .main_header .part2, #header .main_header .part3 {
+      margin-left: 0;
+   }
+   #header .main_navbar #header_navigation {
+      padding: 1rem;
+   }
+   #header .main_navbar .navbar-nav .dropdown-toggle {
+      padding-left: 10px;
+   }
+   .navbar-nav .dropdown-menu {
+      position: absolute;
+   }
+   #header .cart_button {
+      height: 50px;
+    max-width: 150px;
+    width: 100%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   #our_advantages .advantages_item1 .nagro_more {
+      font-size: 3rem;
+   }
+   #header .main_header {
+      font-size: 3.5rem;
+   }
+   .header_logo {
+      text-align: center;
+   }
+}
+@media screen and (max-width: 576px) {
+   #header .main_header {
+      font-size: 2.5rem;
+   }
+   #our_advantages .advantages_item1 .advantages_item1_img {
+      margin-top: -40px;
+   }
+   .sub_menu .navbar-nav {
+      flex-direction: column!important;
+      align-items: center;
+   }
+   #header .choose_language {
+      margin: 0 auto;
+   }
+}
+
+//Media queries
